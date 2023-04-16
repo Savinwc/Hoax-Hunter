@@ -40,8 +40,8 @@ Automated Email-Gmail
 
 
 # Instructions on running project locally:
-Clone the project.
-Install Dependencies.
+Clone the project.</br>
+Install Dependencies.</br>
 python run app.py.
 
 
