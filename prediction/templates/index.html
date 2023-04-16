@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HoaxHunt</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="static/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="static/css/animate.css">
+<link rel="stylesheet" type="text/css" href="static/css/font.css">
+<link rel="stylesheet" type="text/css" href="static/css/li-scroller.css">
+<link rel="stylesheet" type="text/css" href="static/css/slick.css">
+<link rel="stylesheet" type="text/css" href="static/css/jquery.fancybox.css">
+<link rel="stylesheet" type="text/css" href="static/css/theme.css">
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+<!--[if lt IE 9]>
+<script src="static/js/html5shiv.min.js"></script>
+<script src="static/js/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<div id="preloader">
+  <div id="status">&nbsp;</div>
+</div>
+<a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+<div class="container">
+  <header id="header">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="header_top">
+          <div class="header_top_left">
+            <ul class="top_nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="header_top_right">
+            <p>Saturday,Mar 25, 2023</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="header_bottom">
+          <div class="logo_area mx-auto">
+            <a href="index.html" class="logo"><img src="static/img/logo.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </header>
+  <section id="navArea">
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav main_nav">
+          <li class="active"><a href="index.html"><span class="fa fa-home desktop-home"></span><span class="mobile-show">Home</span></a></li>
+          <li><a href="{{url_for('search')}}">Detection</a></li>
+          <!--<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"></a>-->
+            <!--<ul class="dropdown-menu" role="menu">
+              <li><a href="#">Current</a></li>
+              <li><a href="#">Old</a></li>
+            </ul>
+          </li>-->
+        </ul>
+      </div>
+    </nav>
+  </section>
+  <section id="newsSection">
+    <div class="row">
+      <div class="col-lg-12 col-md-12">
+        <div class="latest_newsarea"> <span>Live News</span>
+          <ul id="ticker01" class="news_sticker">
+            <li><a href="#"><img src="static/img/th1.png" alt="">US working to assist Americans who want to leave Afghanistan: Antony Blinken</a></li>
+            <li><a href="https://www.hindustantimes.com/world-news/two-dead-nine-missing-in-pennsylvania-chocolate-factory-explosion-101679716506187.html"><img src="static/img/th2.png" alt="">Two dead, nine missing in Pennsylvania chocolate factory explosion</a></li>
+            <li><a href="https://www.hindustantimes.com/cities/mumbai-news/teen-shooter-turned-18-just-before-murder-took-contract-as-a-ticket-out-of-poverty-101679684367227.html"><img src="static/img/th3.png" alt="">Teen shooter turned 18 just before murder, took contract as a ticket out of poverty</a></li>
+            <li><a href="https://www.hindustantimes.com/cities/kolkata-news/plasticrock-hybrid-discovered-in-andaman-s-aves-island-101679753006985.html"><img src="static/img/th4.png" alt="">Plastic-rock hybrid discovered in Andaman’s Aves island
+            </a></li>
+          </ul>
+          <div class="social_area">
+            <ul class="social_nav">
+              <li class="facebook"><a href="#"></a></li>
+              <li class="twitter"><a href="#"></a></li>
+              <li class="googleplus"><a href="#"></a></li>
+              <li class="youtube"><a href="#"></a></li>
+              <li class="mail"><a href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="sliderSection">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-8">
+        <div class="slick_slider">
+          <div class="single_iteam"> <a href="https://edition.cnn.com/europe/live-news/russia-ukraine-war-news-03-25-23/index.html"> <img src="static/img/slide1.png" alt=""></a>
+            <div class="slider_article">
+              <h2><a class="slider_tittle" href="https://edition.cnn.com/europe/live-news/russia-ukraine-war-news-03-25-23/index.html">Reminders of war motivate Ukraine to perform ‘miracle’ against England</a></h2>
+              <p>It may be thousands of miles from the frontline, but the Ukrainian soccer team is never far from the horrors of war.</p>
+            </div>
+          </div>
+          <div class="single_iteam"> <a href="pages/single_page.html"> <img src="static/img/slide2.png" alt=""></a>
+            <div class="slider_article">
+              <h2><a class="slider_tittle" href="pages/single_page.html">PCC authors warn of floods, worsening heatwaves, inundation of coastline in Maharashtra</a></h2>
+              <p>two authors of the Intergovernmental Panel on Climate Change (IPCC) now warn of five imminent climate outcomes</p>
+            </div>
+          </div>
+          <div class="single_iteam"> <a href="pages/single_page.html"> <img src="static/img/slide4.png" alt=""></a>
+            <div class="slider_article">
+              <h2><a class="slider_tittle" href="pages/single_page.html">When will trains between Kashmir & rest of India begin? </a></h2>
+              <p>Railways minister reveals Ashwini Vaishnaw stated that Udhampur-Banihal track connecting Jammu with Srinagar will be completed by December </p>
+            </div>
+          </div>
+          <div class="single_iteam"> <a href="pages/single_page.html"> <img src="static/img/slide3.png" alt=""></a>
+            <div class="slider_article">
+              <h2><a class="slider_tittle" href="pages/single_page.html">Two arrested for murder of 24-year-old woman in Punjab’s Moga </a></h2>
+              <p>Four days after a 24-year-old woman was found dead in Moga, the district police on Saturday arrested two persons for murder.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="latest_post">
+          <h2><span>Latest posts</span></h2>
+          <div class="latest_post_container">
+            <div id="prev-button"><i class="fa fa-chevron-up"></i></div>
+            <ul class="latest_postnav">
+              <li>
+                <div class="media"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/lat1.png"> </a>
+                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Warning signs and symptoms of dangerously low potassium levels</a> </div>
+                </div>
+              </li>
+              <li>
+                <div class="media"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/lat2.png"> </a>
+                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Vicky Kaushal praises Taj Divided By Blood, calls Naseeruddin Shah ‘chalta firta masterclass in acting’</a> </div>
+                </div>
+              </li>
+              <li>
+                <div class="media"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/lat3.png"> </a>
+                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Prosecutor investigating Donald Trump gets death threat: ‘I AM GOING TO…’ </a> </div>
+                </div>
+              </li>
+              <li>
+                <div class="media"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/lat4.png"> </a>
+                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title">Crackdown on Amritpal: In Punjab, Kejriwal says, ‘tough decisions, but without…’  </a> </div>
+                </div>
+              </li>
+              <li>
+                <div class="media"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/lat5.png"> </a>
+                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Karnataka should bring back BJP to end of ‘politics of manipulation’: PM Modi </a> </div>
+                </div>
+              </li>
+            </ul>
+            <div id="next-button"><i class="fa  fa-chevron-down"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contentSection">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-8">
+        <div class="left_content">
+          <div class="single_post_content">
+            <h2><span>Education</span></h2>
+            <div class="single_post_content_left">
+              <ul class="business_catgnav  wow fadeInDown">
+                <li>
+                  <figure class="bsbig_fig"> <a href="pages/single_page.html" class="featured_img"> <img alt="" src="static/img/e1.png"> <span class="overlay"></span> </a>
+                    <figcaption> <a href="pages/single_page.html"><h1 itemprop="headline" class="native_story_title">JEE Advanced 2023: Last 5 years’ cut-offs for admissions to CSE at IIT Roorkee</h1></a> </figcaption>
+                    <p> The Indian Institute of Technology (IIT) Roorkee offers 13 BTech programmes of which is BTech in Computer Science and Engineering. It is a four year undergraduate programme equally divided into eight semesters. Candidates must clear the JEE Advanced exam to get admission to IIT Roorkee’s CSE programme.</p>
+                  </figure>
+                </li>
+              </ul>
+            </div>
+            <div class="single_post_content_right">
+              <ul class="spost_nav">
+                <li>
+                  <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/e2.png"> </a>
+                    <div class="media-body"> <a href="https://timesofindia.indiatimes.com/education/exams/engineering" class="catg_title"> UGC NET Answer Key 2023: Objection window closing today at ugcnet.nta.nic.in, apply here</a> </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/e3.png"> </a>
+                    <div class="media-body"> <a href="https://timesofindia.indiatimes.com/education/study-abroad/asia/indian-medical-students-studying-in-china-may-be-ineligible-for-fmge-find-out-why/articleshow/95568866.cms" class="catg_title"> Indian medical students studying in China may be ineligible for FMGE</a> </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/e4.png"> </a>
+                    <div class="media-body"> <a href="https://timesofindia.indiatimes.com/education/exams/engineering" class="catg_title"> <span>GATE Exam 2023 schedule released on gate.iitk.ac.in, exam from February 4 to 12</span></a> </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/e5.png"> </a>
+                    <div class="media-body"> <a href="https://timesofindia.indiatimes.com/education/careers/govt/psu-services/which-degree-is-the-best-to-become-an-ias-officer-how-to-prepare-for-the-upsc-exam/articleshow/94788245.cms" class="catg_title"> Which degree is the best to become an IAS Officer? How to prepare for the UPSC exam?</a> </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="fashion_technology_area">
+            <div class="fashion">
+              <div class="single_post_content">
+                <h2><span>Fashion</span></h2>
+                <ul class="business_catgnav wow fadeInDown">
+                  <li>
+                    <figure class="bsbig_fig"> <a href="pages/single_page.html" class="featured_img"> <img alt="" src="static/img/f1.png"> <span class="overlay"></span> </a>
+                      <figcaption> <a href="pages/single_page.html">Bangalore Times Fashion Week kickstarts today</a> </figcaption>
+                      <p>The seventh edition of the Bangalore Times Fashion Week is all set to kickstart from today. The two-day long fashion extravaganza will celebrate the best of fashion and style.</p>
+                    </figure>
+                  </li>
+                </ul>
+                <ul class="spost_nav">
+                  <li>
+                    <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/f2.png"> </a>
+                      <div class="media-body"> <a href="pages/single_page.html" class="catg_title">French fashion brand Coperni introduces bags made from real meteorite</a> </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/f3.png"> </a>
+                      <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Moments from Lakme Fashion Week X FDCI that gave us a sense of déjà vu</a> </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/f4.png"> </a>
+                      <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Nothing much, just Zeenat Aman exuding glam in a self-designed silver gown in throwback pic</a> </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/f5.png"> </a>
+                      <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a> </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="technology">
+              <div class="single_post_content">
+                <h2><span>Technology</span></h2>
+                <ul class="business_catgnav">
+                  <li>
+                    <figure class="bsbig_fig wow fadeInDown"> <a href="pages/single_page.html" class="featured_img"> <img alt="" src="static/img/t1.png"> <span class="overlay"></span> </a>
+                      <figcaption> <a href="pages/single_page.html">Video game publisher Activision Blizzard
+                        increased representation of women and non-binary people by 2 percentage points</a> </figcaption>
+                      <p>The company said women and non-binary employees represented 24.3% of its workforce in November 2021 but that figure has increased to 26.3% as of the end of 2022.</p>
+                    </figure>
+                  </li>
+                </ul>
+                <ul class="spost_nav">
+                  <li>
+                    <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/t2.png"> </a>
+                      <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Why there may be no return to ‘normal’ for the U.S. used vehicle market</a> </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/t3.png"> </a>
+                      <div class="media-body"> <a href="pages/single_page.html" class="catg_title">Nearly $100 billion in deposits pulled from banks; officials call system ‘sound and resilient’</a> </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/t4.png"> </a>
+                      <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Fed poised to approve quarter-point rate hike this week, despite market turmoil</a> </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/t5.png"> </a>
+                      <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Crypto is banned in China, but Binance employees and volunteers tell people how to bypass the ban</a> </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="single_post_content">
+            <h2><span>Photography</span></h2>
+            <ul class="photograph_nav  wow fadeInDown">
+              <li>
+                <div class="photo_grid">
+                  <figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="static/img/photograph_img2.jpg" title="Photography Ttile 1"> <img src="static/img/photograph_img2.jpg" alt=""/></a> </figure>
+                </div>
+              </li>
+              <li>
+                <div class="photo_grid">
+                  <figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="static/img/photograph_img3.jpg" title="Photography Ttile 2"> <img src="static/img/photograph_img3.jpg" alt=""/> </a> </figure>
+                </div>
+              </li>
+              <li>
+                <div class="photo_grid">
+                  <figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="static/img/photograph_img4.jpg" title="Photography Ttile 3"> <img src="static/img/photograph_img4.jpg" alt=""/> </a> </figure>
+                </div>
+              </li>
+              <li>
+                <div class="photo_grid">
+                  <figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="static/img/p1.png" title="Photography Ttile 4"> <img src="static/img/p1.png" alt=""/> </a> </figure>
+                </div>
+              </li>
+              <li>
+                <div class="photo_grid">
+                  <figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="static/img/p2.png" title="Photography Ttile 5"> <img src="static/img/p2.png" alt=""/> </a> </figure>
+                </div>
+              </li>
+              <li>
+                <div class="photo_grid">
+                  <figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="static/img/p3.png" title="Photography Ttile 6"> <img src="static/img/p3.png" alt=""/> </a> </figure>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="single_post_content">
+            <h2><span>Business</span></h2>
+            <div class="single_post_content_left">
+              <ul class="business_catgnav">
+                <li>
+                  <figure class="bsbig_fig  wow fadeInDown"> <a class="featured_img" href="pages/single_page.html"> <img src="static/img/b1.png" alt=""> <span class="overlay"></span> </a>
+                    <figcaption> <a href="pages/single_page.html">One year after the first rate hike, the Fed stands at policy crossroads</a> </figcaption>
+                    <p>Exactly one year ago, on March 16, 2022, the Federal Open Market Committee enacted the first of what would be eight interest rate increases. </p>
+                  </figure>
+                </li>
+              </ul>
+            </div>
+            <div class="single_post_content_right">
+              <ul class="spost_nav">
+                <li>
+                  <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/b2.png"> </a>
+                    <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Ex-Google employees’ A.I. chatbot startup valued at $1 billion after Andreessen Horowitz funding</a> </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/b3.png"> </a>
+                    <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> TikTok CEO says China-based ByteDance employees still have access to some U.S. data</a> </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/b4.png"> </a>
+                    <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Amazon’s devices head ditched the Echo in his living room for a smart TV</a> </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/b5.png"> </a>
+                    <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Apple will require a subscription to watch ‘Friday Night Baseball’ this year</a> </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <aside class="right_content">
+          <div class="single_sidebar">
+            <h2><span>Popular posts</span></h2>
+            <ul class="spost_nav">
+              <li>
+                <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/pop1.png"> </a>
+                  <div class="media-body"> <a href="https://timesofindia.indiatimes.com/business/india-business/identify-stress-points-adverse-exposures-what-fm-sitharaman-told-state-banks-amid-global-turmoil/articleshow/98995576.cms?from=mdr" class="catg_title"> 'Identify stress points, adverse exposures': What FM Sitharaman told state-run banks amid global turmoil</a> </div>
+                </div>
+              </li>
+              <li>
+                <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/pop2.png"> </a>
+                  <div class="media-body"> <a href="https://timesofindia.indiatimes.com/world/us/at-least-23-killed-in-mississippi-tornado-and-storms/articleshow/98995968.cms?from=mdr" class="catg_title"><span>At least 23 killed in Mississippi tornado and storms</span></a> </div>
+                </div>
+              </li>
+              <li>
+                <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/pop3.png"> </a>
+                  <div class="media-body"> <a href="https://timesofindia.indiatimes.com/gadgets-news/france-bans-tiktok-twitter-from-government-staff-phones/articleshow/98994593.cms?from=mdr" class="catg_title"> France bans TikTok, Instagram and Twitter on government devices for these purposes</a> </div>
+                </div>
+              </li>
+              <li>
+                <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/pop4.png"> </a>
+                  <div class="media-body"> <a href="https://timesofindia.indiatimes.com/sports/cricket/wpl/wpl-final-against-mumbai-indians-a-massive-challenge-but-we-are-confident-delhi-capitals-meg-lanning/articleshow/98996653.cms?from=mdr" class="catg_title"> WPL Final 2023 against Mumbai Indians a massive challenge, but we are confident: Delhi Capitals' Meg Lanning</a> </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="single_sidebar">
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#category" aria-controls="home" role="tab" data-toggle="tab">Category</a></li>
+              <li role="presentation"><a href="#video" aria-controls="profile" role="tab" data-toggle="tab">Video</a></li>
+              <li role="presentation"><a href="#comments" aria-controls="messages" role="tab" data-toggle="tab">Comments</a></li>
+            </ul>
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="category">
+                <ul>
+                  <li class="cat-item"><a href="#">Sports</a></li>
+                  <li class="cat-item"><a href="#">Fashion</a></li>
+                  <li class="cat-item"><a href="#">Business</a></li>
+                  <li class="cat-item"><a href="#">Technology</a></li>
+                  <li class="cat-item"><a href="#">Games</a></li>
+                  <li class="cat-item"><a href="#">Life &amp; Style</a></li>
+                  <li class="cat-item"><a href="#">Photography</a></li>
+                </ul>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="video">
+                <div class="vide_area">
+                  <iframe width="100%" height="250" src="http://www.youtube.com/embed/h5QWbURNEpA?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="comments">
+                <ul class="spost_nav">
+                  <li>
+                    <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/post_img1.jpg"> </a>
+                      <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a> </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/post_img2.jpg"> </a>
+                      <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a> </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/post_img1.jpg"> </a>
+                      <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a> </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="static/img/post_img2.jpg"> </a>
+                      <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a> </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="single_sidebar wow fadeInDown">
+            <h2><span>Sponsor</span></h2>
+            <a class="sideAdd" href="#"><img src="static/img/sponsor.png" alt=""></a> </div>
+          <div class="single_sidebar wow fadeInDown">
+            <h2><span>Category Archive</span></h2>
+            <select class="catgArchive">
+              <option>Select Category</option>
+              <option>Life styles</option>
+              <option>Sports</option>
+              <option>Technology</option>
+              <option>Treads</option>
+            </select>
+          </div>
+          <div class="single_sidebar wow fadeInDown">
+            <h2><span>Links</span></h2>
+            <ul>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Rss Feed</a></li>
+              <li><a href="#">Login</a></li>
+              <li><a href="#">Life &amp; Style</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+  <footer id="footer">
+    <div class="footer_top">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="footer_widget wow fadeInLeftBig">
+            <h2>News Station</h2>
+            <ul class="tag_nav">
+              <li><a href="#">Games</a></li>
+              <li><a href="#">Sports</a></li>
+              <li><a href="#">Business</a></li>
+              
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="footer_widget wow fadeInDown">
+            <h2>Tag</h2>
+            <ul class="tag_nav">
+              <li><a href="#">Games</a></li>
+              <li><a href="#">Sports</a></li>
+              <li><a href="#">Fashion</a></li>
+              <li><a href="#">Business</a></li>
+              <li><a href="#">Life &amp; Style</a></li>
+              <li><a href="#">Technology</a></li>
+              <li><a href="#">Photos</a></li>
+              
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="footer_widget wow fadeInRightBig">
+            <h2>Contact</h2>
+            <p>We would love to hear from you! Whether you have a question about our products or services, need assistance with an order, or just want to say hello, feel free to reach out to us through any of the following channels:</p>
+            <address>
+              Email:hoaxhunter@gmail.com
+      
+              <br>
+              Phone:+1234556
+              
+              <br>
+              Social Media:www.facebook.com
+              
+              
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <p class="copyright">Copyright &copy; 2023 <a href="index.html">Cyber Sentinels</a></p>
+      <p class="developer">Developed By Savio Rodricks</p>
+    </div>
+  </footer>
+</div>
+
+<script src="static/js/jquery.min.js"></script> 
+<script src="static/js/wow.min.js"></script> 
+<script src="static/js/bootstrap.min.js"></script> 
+<script src="static/js/slick.min.js"></script> 
+<script src="static/js/jquery.li-scroller.1.0.js"></script> 
+<script src="static/js/jquery.newsTicker.min.js"></script> 
+<script src="static/js/jquery.fancybox.pack.js"></script> 
+<script src="static/js/custom.js"></script>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="Helper"
+  agent-id="2660869b-1c43-46e5-b1ab-1b1e4f42a923"
+  language-code="en"
+  chat-icon="https://img.icons8.com/3d-fluency/512/chatbot.png"
+></df-messenger>
+
+</body>
+</html>

@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoax Hunt</title>
+    <style>
+        *{
+            margin: 0;
+            outline: none;
+            box-sizing: border-box;
+        }        
+        body{
+            font-family: Space Grotesk;
+            background-color: #1E1F31;
+            overflow-x: hidden;
+        }
+       
+        .wrapper{
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+        header{
+            padding: 50px 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header ul li{
+            list-style: none;
+            display: inline-block;
+            margin: 0 15px;
+        }
+        header ul li a{
+            color: #aba9b4;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: all ease 0.5s;
+        }
+        header ul li a:hover{
+            color: #add8e6;
+        }
+        header ul li a.btn{
+            display: inline-block;
+            width: 180px;
+            height: 60px;
+            line-height: 60px;
+            background-color: #add8e6;
+            color: #fff;
+            text-align: center;
+            font-size: 18px;
+            border-radius: 50px;
+            transition: all ease 0.5s;
+        }
+        header ul li a.btn:hover{
+            background-color: #615c59;
+        }
+
+        .content{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 50px 100px 0;
+        }
+        .text{
+            width: 50%;
+            padding-right: 150px;
+        }
+        .text p{
+            font-size: 28px;
+            line-height: 46px;
+            color: #fff;
+        }
+        .text p span{
+            color: #add8e6;
+        }
+        .text a{
+            position: relative;
+            display: inline-block;
+            font-size: 18px;
+            text-transform: uppercase;
+            color: #fff;
+            text-decoration: none;
+            padding: 18px 30px;
+            letter-spacing: 2px;
+            font-weight: 500;
+            margin-top: 60px;
+        }
+        .text a:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            background-color: #add8e6;
+            z-index: -1;
+            transition: all ease 0.5s;
+        }
+        .text a:hover:before{
+            width: 100%;
+        }
+
+        .img{
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(520px, #ffffff , transparent 50%);
+            margin-top: -50px;
+        }
+        .email-icon{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .social-icons{
+            height: 100%;
+            animation: rotation 60s linear infinite;
+        }
+        @keyframes rotation {
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .social-icons img{
+            position: absolute;
+        }
+        .social-icons img:nth-child(1){
+            top: 0;
+            left: 42%;
+        }
+        .social-icons img:nth-child(2){
+            top: 25%;
+            right: 0;
+        }
+        .social-icons img:nth-child(3){
+            top: 70%;
+            left: 70%;
+        }
+        .social-icons img:nth-child(4){
+            top: 25%;
+            left: 0;
+        }
+        .social-icons img:nth-child(5){
+            top: 70%;
+            left: 10%;
+        }
+        .social-icons img:nth-child(6){
+            top: 25%;
+            left: 0;
+        }
+
+
+        .wave{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            line-height: 0;
+        }
+        .wave:before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(static/img/wave.svg) repeat-x;
+            background-size: cover;
+            background-position: -1000px 0;
+            opacity: .2;
+            animation: waveOne 60s linear infinite; 
+        }
+        @keyframes waveOne {
+            50%{
+                background-position: 0 0;
+            }
+        }
+        .wave:after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(static/img/wave.svg) repeat-x;
+            background-size: cover;
+            background-position: 2732px 0;
+            opacity: .3;
+            animation: waveOne 120s linear infinite; 
+        }
+
+
+        /*SUBMENU*/
+        ul ul{
+            max-width: 250px;
+            position: absolute;
+            padding: 10px 0;
+            opacity: 0;
+            z-index: -9999;
+            transition: all ease 0.5s;
+        }
+        ul li:hover ul{
+            opacity: 1;
+            z-index: 9;
+            padding: 30px 0;
+        }
+        ul ul li{
+            margin: 0;
+            width: 100%;
+        }
+        ul ul li a{
+            width: 100%;
+            display: inline-block;
+            padding: 20px;
+            background-color: #383a58;
+            color: #fff;
+        }
+        ul ul li:first-child a{
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        ul ul li:last-child a{
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        ul ul li a:hover{
+            background-color: #add8e6;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="wrapper">
+    <header>
+        <div class="logo">
+            <img src="static/img/logo.svg" alt="">
+        </div>
+        <nav>
+            <ul>
+                
+                
+                <li><a class="btn" href="/">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <div class="text">
+            <p>Nowadays,it can be difficult to tell the difference between credible information and misinformation online 💻.
+            <span>Hoax Hunter</span> provides users with a solution that lets them discover the truth behind the artices they read.</p>
+
+            <form action="/prediction" method="POST" class="animated bounce">
+                <div class="mb-3">
+                  
+                  <br>
+                  <style>
+                    .form-control {
+                      width: 600px;
+                      height: 30px;
+                      border-radius: 15px;
+                      
+                    }
+                    </style>
+                  <input type="text" class="form-control" placeholder="Enter News Link" id="url" name="url" aria-describedby="emailHelp">
+                            
+                  <style>#news::-webkit-input-placeholder {
+                    text-align: center;
+                 }
+                 #news:-moz-placeholder {
+                    text-align: center;
+                 }
+                 #news::-moz-placeholder {
+                    text-align: center;
+                 }
+                 #news:-ms-input-placeholder {
+                    text-align: center;
+                 }
+                 </style>
+        
+                </div>
+                            
+                <br>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-primary me-md-2" type="submit">Submit</button>
+                    <style>
+                    .btn-primary {
+                        background-color: #add8e6; 
+                        color: black; 
+                        width: 100px;
+                        height: 30px;
+                        border-radius: 10px;
+                      }
+                    </style>
+                  </div>
+              </form>
+        </div>
+        <div class="img">
+            <div class="social-icons">
+                <img src="static/img/social-icon1.png" alt="">
+                <img src="static/img/social-icon2.png" alt="">
+                <img src="static/img/social-icon3.png" alt="">
+                <img src="static/img/social-icon4.png" alt="">
+                <img src="static/img/social-icon5.png" alt="">
+                <img src="static/img/social-icon6.png" alt="">
+
+            </div>
+            <img class="email-icon" src="static/img/email-icon.png" alt="">
+        </div>
+    </div>
+    
+
+<div class="wave">
+    <img src="static/img/wave.svg" alt="">
+    
+</div>
+
+</div>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<df-messenger
+  intent="WELCOME"
+  chat-title="Helper"
+  agent-id="2660869b-1c43-46e5-b1ab-1b1e4f42a923"
+  language-code="en"
+  chat-icon="https://img.icons8.com/3d-fluency/512/chatbot.png"
+></df-messenger>
+
+</body>
+</html>

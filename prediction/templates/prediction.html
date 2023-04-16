@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>HoaxHunt</title>
+<link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
+<style></style>
+<script type='text/javascript' src=''></script>
+<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+<script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
+</head>
+<body oncontextmenu='return false' class='snippet-body'>
+<header class="fixed-top" style="margin-top: 10px;">
+<div class="container">
+<div class="row">
+<div class="col-12 text-center  header-text">
+<h3>Hoax Hunt</h3>
+</div>
+</div>
+</div>
+</header>
+                            
+<section class="pt-5 pb-5">
+    <div class="container" >
+        <div class="row">
+            <div class="col-12">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="card" style="border-radius: 10px;">
+                                        
+                                        <div class="card-body {% if authenticity.authentic=='True' %}bg-success{% elif authenticity.authentic=='False' %}bg-danger{% endif %} rounded">
+                                            <h4 class="card-title">Prediction</h4>
+                                            {% if authenticity.authentic=='True' %}
+                                            <p class="card-text" style="font-size: larger;">The authenticity value is true. We consider the article to be free from deception, manipulation, or artificiality, and it carries a sense of credibility and trustworthiness.</p>
+                                              {% elif authenticity.authentic=='False' %}
+                                              <p class="card-text">This article does not come from a trusted source, it's important to be cautious and not automatically assume that the contents are reliable. You should evaluate the information critically, fact-check it through multiple sources, and consider the credibility of the source before trusting the contents.</p>
+                                              {% elif authenticity.authentic=='Unknown' %}
+                                              <p class="card-text">Unknown</p>
+                                            {%endif%}
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card" style="border-radius: 10px;">
+                                      <img class="img-fluid" alt="WordCloud" src="{{ url_for('plotly_wordcloud', url=url) }}" style="width: 600px; height: 350px;">
+
+                                        <div class="card-body">
+                                            <h4 class="card-title">WordCloud</h4>
+                                            
+
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="button-container">
+                                  <form id="sentiment-form" action="{{url_for('sentiment')}}" method="post">
+                                    <input type="hidden" name="url" value="{{ url }}">
+                                    <button type="submit" class="button">Sentiment
+                                      <div id="spinner" class="spinner-border text-primary text-dark spinner-grow-lg" role="status" style="display:none;">
+                                        <span class="sr-only">Loading...</span>
+                                      </div>
+                                    </button>
+                                  </form>
+                                
+                                
+                                <script>
+                                  const sentimentForm = document.getElementById('sentiment-form');
+                                  const spinner = document.getElementById('spinner');
+                                
+                                  sentimentForm.addEventListener('submit', function() {
+                                    spinner.style.display = 'block';
+                                  });
+                                
+                                  window.addEventListener('load', function() {
+                                    spinner.style.display = 'none';
+                                  });
+                                </script>
+                                
+                                <form id="twitter-form" action="{{url_for('twitter')}}" method="post">
+                                  <input type="hidden" name="url" value="{{ url }}">
+                                  <button type="submit" class="button">Twitter
+                                    <div id="spinner" class="spinner-border text-primary text-dark spinner-grow-lg" role="status" style="display:none;">
+                                      <span class="sr-only">Loading...</span>
+                                    </div>
+                                  </button>
+                                </form>
+                                
+                                <script>
+                                  const twitterForm = document.getElementById('twitter-form');
+                                  const spinner = document.getElementById('spinner');
+                                
+                                  twitterForm.addEventListener('submit', function() {
+                                    spinner.style.display = 'block';
+                                  });
+                                
+                                  window.addEventListener('load', function() {
+                                    spinner.style.display = 'none';
+                                  });
+                                </script>
+                                
+                                
+                                      <form action="{{url_for('news')}}" method="post">
+                                        <input type="hidden" name="url" value="{{ url }}">
+                                        <input type="hidden" name="rNews" value="{{ rNews }}">
+                                        <button type="submit" class = "button">Relevant News</button>
+                                      </form>
+                                        
+                                     </div>
+
+                                     
+
+                                <style>
+
+                                    header {
+                                        background-color: black;
+                                        border-radius: 25px;
+                                        padding: 10px;
+                                        margin-bottom: 20px;
+                                        max-width: 600px;
+                                        margin-left: auto;
+                                        margin-right: auto;
+                                      }
+                                    body {
+                                        background-color: #add8e6;
+                                      }
+                                    header.fixed-top {
+                                        background-color: #add8e6;
+                                      }
+                                    header.fixed-top h3 {
+                                        color: black;
+                                      }
+                                      .header-text {
+                                        color: black;
+                                      }
+                                      
+                                    .button-container {
+                                       display: flex;
+                                       justify-content: space-between;
+                                       width: 100%;
+                                    }
+                                    
+                                    .button {
+                                       padding: 10px;
+                                       background-color: #ffffff;
+                                    }
+                                    body {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        min-height: 100vh;
+                                      }
+                                      
+                                      .button {
+                                        display: inline-block;
+                                        position: relative;
+                                        z-index: 1;
+                                        overflow: hidden;
+                                        text-decoration: none;
+                                        font-family: sans-serif;
+                                        font-weight: 600;
+                                        font-size: 1.2em;
+                                        padding:0.5em 0.8em;
+                                        color: blue;
+                                        border: 0.15em solid blue;
+                                        border-radius: calc(0.75em + 0.5em + 0.15em);
+                                        transition: 1s;
+                                      }
+                                      .button:before, .button:after {
+                                        content: "";
+                                        position: absolute;
+                                        top: -1.5em;
+                                        z-index: -1;
+                                        width: 200%;
+                                        aspect-ratio: 1;
+                                        border: none;
+                                        border-radius: 40%;
+                                        background-color: rgba(0, 0, 255, 0.5);
+                                        transition: 1s;
+                                      }
+                                      .card {
+                                        width: 600px;
+                                        height: 400px;
+                                      }
+                                      .button:before {
+                                        left: -80%;
+                                        transform: translate3d(0, 5em, 0) rotate(-340deg);
+                                      }
+                                      .button:after {
+                                        right: -80%;
+                                        transform: translate3d(0, 5em, 0) rotate(390deg);
+                                      }
+                                      .button:hover, .button:focus {
+                                        color: white;
+                                      }
+                                      .button:hover:before, .button:hover:after, .button:focus:before, .button:focus:after {
+                                        transform: none;
+                                        background-color: blue(0, 0, 255, 0.75);
+
+                                      }
+                                      
+                                      
+                                </style>  
+                                <style>
+                                  body {
+                                      background-image: url("https://media.istockphoto.com/id/1365566546/photo/titles-on-screen-in-hand-with-fake-news-and-hoax-information-3d-illustration.jpg?s=612x612&w=0&k=20&c=5hqnT1oAJ3gn3sUZlVxxXAgTZmKOhheM32KM5JToRUo=");
+                                      background-size: cover;
+                                      background-position: center;
+                                  }
+                              </style>    
+                                <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>  
+                                <df-messenger
+  intent="WELCOME"
+  chat-title="Helper"
+  agent-id="2660869b-1c43-46e5-b1ab-1b1e4f42a923"
+  language-code="en"
+  chat-icon="https://img.icons8.com/3d-fluency/512/chatbot.png"
+></df-messenger>                     
+</body>
+</html>

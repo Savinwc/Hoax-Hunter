@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>HoaxHunt</title>
+<link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
+<style></style>
+<script type='text/javascript' src=''></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+<script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
+</head>
+<body oncontextmenu='return false' class='snippet-body'>
+<header class="fixed-top">
+<div class="container">
+<div class="row">
+<div class="col-12 text-center">
+<h3>Hoax Hunt</h3>
+</div>
+</div>
+</div>
+</header>
+
+
+
+<section class="pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                        <p>Sentiment Analysis</p>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="card" style="border-radius: 15px;">
+                                      <canvas id="myChart" width="400" height="400"></canvas>
+                                        <div class="card-body">
+                                            <h4 class="card-title">Article Propaganda</h4>
+                                          </div>
+
+                                    </div>
+                                </div>
+                                <script>
+                              
+                                  
+                                  // Define a function to generate the bar graph using Chart.js library
+                                  function generateGraph(canvasId, yesValue, noValue) {
+                                    const ctx = document.getElementById(canvasId).getContext('2d');
+                                    const chart = new Chart(ctx, {
+                                      type: 'bar',
+                                      data: {
+                                        labels: ['Yes', 'No'],
+                                        datasets: [{
+                                          label: 'Responses',
+                                          data: [yesValue, noValue],
+                                          backgroundColor: [
+                                            'rgba(75, 192, 192, 0.2)',
+                                            'rgba(255, 99, 132, 0.2)'
+                                          ],
+                                          borderColor: [
+                                            'rgba(54, 162, 235, 1)',
+                                            'rgba(255, 99, 132, 1)'
+                                          ],
+                                          borderWidth: 1
+                                        }]
+                                      },
+                                      options: {
+                                        scales: {
+                                          yAxes: [{
+                                            ticks: {
+                                              beginAtZero: true
+                                            }
+                                          }]
+                                        }
+                                      }
+                                    });
+                                  }
+                                  
+                                  var propJSON = '{{ prop|tojson }}';
+                                    var propData = JSON.parse(propJSON);
+                                  // Call the function to generate the bar graph
+                                  generateGraph('myChart', propData.yes, propData.no);
+                                </script>
+                                <div class="col-md-4 mb-3">
+                                  <div class="card" style="border-radius: 15px;">
+                                      <canvas id="polarchart"></canvas>
+                                      <div class="card-body">
+                                          <h4 class="card-title">Article Sentiment</h4>
+                                      </div>
+                                  </div>
+                                  <script>
+                                    const canvas2 = document.getElementById('polarchart');
+
+                                    var chartDataJson = '{{ article_sentiment|tojson }}';
+                                    var chartData = JSON.parse(chartDataJson);
+                                    
+                                    var chartData = {
+                                        labels: chartData.labels,
+                                        datasets: [{
+                                            label: 'Article Sentiment',
+                                            data: chartData.values,
+                                            backgroundColor: [
+                                                'rgba(255, 99, 132, 0.2)',
+                                                'rgba(54, 162, 235, 0.2)',
+                                                'rgba(255, 206, 86, 0.2)',
+                                                'rgba(75, 192, 192, 0.2)',
+                                                'rgba(153, 102, 255, 0.2)'
+                                            ],
+                                            borderColor: [
+                                                'rgba(255, 99, 132, 1)',
+                                                'rgba(54, 162, 235, 1)',
+                                                'rgba(255, 206, 86, 1)',
+                                                'rgba(75, 192, 192, 1)',
+                                                'rgba(153, 102, 255, 1)'
+                                            ],
+                                            borderWidth: 1
+                                        }]
+                                    };
+                                    
+                                    const chartOptions = {
+                                        scale: {
+                                            ticks: {
+                                                beginAtZero: true
+                                            }
+                                        },
+                                        plugins: {
+                                            datalabels: {
+                                                color: 'black',
+                                                font: {
+                                                    weight: 'bold'
+                                                },
+                                                formatter: function(value, context) {
+                                                    return value;
+                                                }
+                                            }
+                                        }
+                                    };
+                                    
+                                    const polarAreaChart = new Chart(canvas2, {
+                                        type: 'polarArea',
+                                        data: chartData,
+                                        options: chartOptions
+                                    });
+                                </script>
+                                
+                              </div>
+                              <script src="prediction\static\polarchart.js"></script>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card" style="border-radius: 15px;">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Article Summary</h4>
+                                            <p class="card-text">{{article_summary}}</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                                    
+
+
+                                <style>
+                                    
+                                    
+                                    header {
+                                        background-color: white;
+                                        border-radius: 25px;
+                                        padding: 10px;
+                                        margin-bottom: 20px;
+                                        max-width: 600px;
+                                        margin-left: auto;
+                                        margin-right: auto;
+                                      }
+                                    body {
+                                        background-color: #add8e6;
+                                      }
+                                    header.fixed-top {
+                                        background-color: #1E1F31;
+                                      }
+                                    header.fixed-top h3 {
+                                        color: white;
+                                      }
+                                    .button-container {
+                                        text-align: center;
+                                    }
+                                    
+                                    .button {
+                                       padding: 10px 20px;
+                                       background-color: #ffffff;
+                                       display: inline-block;
+                                       font-size: 16px;
+                                    }
+                                    body {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        min-height: 100vh;
+                                      }
+                                      
+                                      .button {
+                                        display: inline-block;
+                                        position: relative;
+                                        z-index: 1;
+                                        overflow: hidden;
+                                        text-decoration: none;
+                                        font-family: sans-serif;
+                                        font-weight: 600;
+                                        font-size: 1.2em;
+                                        padding:0.5em 0.8em;
+                                        color: blue;
+                                        border: 0.15em solid blue;
+                                        border-radius: calc(0.75em + 0.5em + 0.15em);
+                                        transition: 1s;
+                                      }
+                                      .button:before, .button:after {
+                                        content: "";
+                                        position: absolute;
+                                        top: -1.5em;
+                                        z-index: -1;
+                                        width: 200%;
+                                        aspect-ratio: 1;
+                                        border: none;
+                                        border-radius: 40%;
+                                        background-color: rgba(0, 0, 255, 0.5);
+                                        transition: 1s;
+                                      }
+                                      .button:before {
+                                        left: -80%;
+                                        transform: translate3d(0, 5em, 0) rotate(-340deg);
+                                      }
+                                      .button:after {
+                                        right: -80%;
+                                        transform: translate3d(0, 5em, 0) rotate(390deg);
+                                      }
+                                      .button:hover, .button:focus {
+                                        color: white;
+                                      }
+                                      .button:hover:before, .button:hover:after, .button:focus:before, .button:focus:after {
+                                        transform: none;
+                                        background-color: blue(0, 0, 255, 0.75);
+                                      }
+                                      
+                                </style>                             
+</body>
+</html>
