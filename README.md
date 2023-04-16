@@ -32,10 +32,14 @@ Other Tools - Twitter, HuggingFace,RapidAPI
 Automated Email-Gmail
 
 # Output
-<img width="833" alt="Screenshot 2023-04-16 161220" src="https://user-images.githubusercontent.com/93364152/232301829-8631fed1-a6f3-4652-abab-9f7c366e4ee5.png">
-<img width="768" alt="Screenshot 2023-04-16 161243" src="https://user-images.githubusercontent.com/93364152/232301843-a682fb1b-a3b8-43c0-9127-f4343ee99021.png">
-<img width="761" alt="Screenshot 2023-04-16 161352" src="https://user-images.githubusercontent.com/93364152/232301848-f36c583f-337d-407d-aca8-ba818ee12f88.png">
-<img width="928" alt="Screenshot 2023-04-16 161705" src="https://user-images.githubusercontent.com/93364152/232301851-680c085e-ecc5-4507-b8c9-680d11f526dc.png">
+<p float="left">
+<img width="200" alt="Screenshot 2023-04-16 161220" src="https://user-images.githubusercontent.com/93364152/232302204-cfbd41ba-8bf5-4150-882f-db0e7a68e86d.png">
+<img width="200" alt="Screenshot 2023-04-16 161243" src="https://user-images.githubusercontent.com/93364152/232302214-4f26f209-9c77-4ee7-8e26-b43e35c52684.png">
+<img width="200" alt="Screenshot 2023-04-16 161352" src="https://user-images.githubusercontent.com/93364152/232302218-fe1b87e8-032c-41f3-a41e-c1b227aaa83f.png">
+<img width="200" alt="Screenshot 2023-04-16 161705" src="https://user-images.githubusercontent.com/93364152/232302221-7c65d2c5-d43c-4912-a31c-aaf805fa4379.png">
+<img width="200" alt="Screenshot 2023-04-16 162128" src="https://user-images.githubusercontent.com/93364152/232302224-eba17a7f-e59c-49e9-b6cb-9762281a16d9.png">
+<img width="200" alt="Screenshot 2023-04-16 162148" src="https://user-images.githubusercontent.com/93364152/232302226-64c738bc-163c-4243-9b01-8d0042d66e59.png">
+</p>
 
 
 
