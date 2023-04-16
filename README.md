@@ -24,10 +24,31 @@ Hoax Hunter is the solution you need to remain informed and make informed decisi
 
 ⚙️Easy-to-Use Interface: User-friendly interface, making it accessible and intuitive for users of all levels. Only putting the URL of the blog and the application will generate the whole analytical report.
 
-#Tech Stack
+# Tech Stack
 Frontend - HTML,CSS,JS,Bootstrap
 Chatbot-DialogFlow
 Backend - Flask
 Other Tools - Twitter, HuggingFace,RapidAPI
+
+# UseCases
+🗳️ In Political campaigns, Monitor and analyse social media activity and sentiment surrounding issues and candidates from parties, in order to gain a better understanding of public opinion from social media.
+
+📰 In News Media, Identify and prevent misinformation by analysing the sentiment and credibility of news articles and sources. As News Media is the platform where the information is spread so having the correct fact check is important.
+
+📦 In Product Market Fit Analysis, To understand about the product with the help of sentiment of the user reviews on social media and also monitoring the needs to improve it in a better way. It is useful tor analysing whether the product is market fit or not.
+
+🕵️ Identifying Suspected Users , Keeping track of the activity and sentiment of users who interact with a specific piece of content on social media. It’s helpful to understand doing spam tweets on the same content or spreading misleading content.
+
+🤖 Detecting Unusual Behaviour, Track and Identify coordinated bot and automaton campaigns to prevent manipulation and disinformation.
+
+✔️ In Informative/Factual Content Curation, Curating and Checking the whether the content is correct or containing any manipulative sentence.
+
+📄 In Research Analysis, Useful for research about the product/news/hashtags nature and sentiment on the social media to understand it in a better way and also helpful to understand the trend.
+
+# Instructions on running project locally:
+Clone the project
+Install Dependencies
+python run app.py
+
 
 
