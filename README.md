@@ -24,5 +24,10 @@ Hoax Hunter is the solution you need to remain informed and make informed decisi
 
 ⚙️Easy-to-Use Interface: User-friendly interface, making it accessible and intuitive for users of all levels. Only putting the URL of the blog and the application will generate the whole analytical report.
 
+#Tech Stack
+Frontend - HTML,CSS,JS,Bootstrap
+Chatbot-DialogFlow
+Backend - Flask
+Other Tools - Twitter, HuggingFace,RapidAPI
 
 
