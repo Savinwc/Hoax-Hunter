@@ -32,7 +32,8 @@ Other Tools - Twitter, HuggingFace,RapidAPI
 Automated Email-Gmail
 
 # Output
-<img width="833" alt="Screenshot 2023-04-16 161220" src="https://user-images.githubusercontent.com/93364152/232300689-1f417d16-9f50-4995-9201-414f8340fde3.png">
+<img width="833<img width="928" alt="Screenshot 2023-04-16 161705" src="https://user-images.githubusercontent.com/93364152/232301648-8573585d-fa32-4f63-867b-19e6921e72cf.png">
+" alt="Screenshot 2023-04-16 161220" src="https://user-images.githubusercontent.com/93364152/232300689-1f417d16-9f50-4995-9201-414f8340fde3.png">
 <img width="768" alt="Screenshot 2023-04-16 161243" src="https://user-images.githubusercontent.com/93364152/232300701-3ffe348f-5db7-4759-ba83-da04f72ab4f1.png">
 <img width="761" alt="Screenshot 2023-04-16 161352" src="https://user-images.githubusercontent.com/93364152/232300704-05a1808a-d31d-45f8-b652-f7c3f12fda57.png">
 
